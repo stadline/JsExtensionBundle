@@ -1,0 +1,19 @@
+{
+    "name": "stadline/js-extension-bundle",
+    "description": "A collection of JS tools",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alex-pex",
+            "email": "alexandre.paixao@stadline.com"
+        }
+    ],
+    "suggest": {
+        "fxp/composer-asset-plugin": "NPM/Bower Dependency Manager for Composer",
+        "bower-asset/jquery": "jQuery JavaScript Library",
+        "bower-asset/marionette": "The Backbone framework",
+        "bower-asset/magnific-popup": "Light and responsive lightbox script with focus on performance.",
+        "willdurand/js-translation-bundle": "A pretty nice way to expose your translation messages to your JavaScript.",
+        "friendsofsymfony/jsrouting-bundle": "A pretty nice way to expose your Symfony2 routing to client applications."
+    }
+}
