@@ -1,4 +1,8 @@
 services:
-#    stad_line_js_extension.example:
-#        class: StadLine\JsExtensionBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    stadline_js_extension.twig.functions_extension:
+        class: StadLine\JsExtensionBundle\Twig\FunctionsExtension
+        tags:
+            - { name: twig.extension }
+        arguments: [ %kernel.root_dir% ]
+        calls :
+            - [setSerializer, [@jms_serializer]]

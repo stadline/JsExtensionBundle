@@ -1,0 +1,13 @@
+window.Request = {
+    query:      {{ app.request.query.all      |json_encode|raw }},
+    attributes: {{ app.request.attributes.all |json_encode|raw }},
+    request:    {{ app.request.request.all    |json_encode|raw }},
+    get: function(key, _default) {
+        if (this.query[key])           return this.query[key];
+        else if (this.attributes[key]) return this.attributes[key];
+        else if (this.request[key])    return this.request[key];
+        else                           return _default;
+    }
+};
+
+window.Context = {{ serialize_context(_context) }};

@@ -8,13 +8,17 @@
             "email": "alexandre.paixao@stadline.com"
         }
     ],
+    "require": {
+        "symfony/framework-bundle": "~2.3",
+        "jms/serializer-bundle": "~0.12"
+    },
     "suggest": {
         "fxp/composer-asset-plugin": "NPM/Bower Dependency Manager for Composer",
         "bower-asset/jquery": "jQuery JavaScript Library",
         "bower-asset/marionette": "The Backbone framework",
-        "bower-asset/magnific-popup": "Light and responsive lightbox script with focus on performance.",
-        "willdurand/js-translation-bundle": "A pretty nice way to expose your translation messages to your JavaScript.",
-        "friendsofsymfony/jsrouting-bundle": "A pretty nice way to expose your Symfony2 routing to client applications."
+        "bower-asset/magnific-popup": "Light and responsive lightbox script with focus on performance",
+        "willdurand/js-translation-bundle": "A pretty nice way to expose your translation messages to your JavaScript",
+        "friendsofsymfony/jsrouting-bundle": "A pretty nice way to expose your Symfony2 routing to client applications"
     },
     "autoload": {
         "psr-4": {

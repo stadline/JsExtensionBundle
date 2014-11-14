@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('stad_line_js_extension');
+        $rootNode = $treeBuilder->root('stadline_js_extension');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
