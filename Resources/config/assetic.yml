@@ -1,0 +1,22 @@
+assetic:
+    assets:
+        underscore_js:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/underscore.js
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/underscore.string.js
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/underscore.template.js
+            output: js/underscore-bundled.js
+
+        backbone_js:
+            inputs:
+                - @underscore_js
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/backbone.js
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/backbone.mutators.js
+            output: js/backbone-bundled.js
+
+        marionette_js:
+            inputs:
+                - @backbone_js
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/backbone.marionette.js
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/jquery.serialize-object.js
+            output: js/marionette-bundled.js
