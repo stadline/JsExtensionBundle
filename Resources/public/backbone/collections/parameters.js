@@ -44,7 +44,11 @@ App.module('Collections', function(module) {
         }
     });
 
-    module.addInitializer(function() {
+    module.on("before:start", function() {
         App.parameters = new App.Collections.Parameters();
+    });
+
+    module.on("stop", function() {
+        App.parameters.reset();
     });
 });
