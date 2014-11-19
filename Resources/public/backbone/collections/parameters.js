@@ -1,4 +1,4 @@
-App = window.App || new Marionette.Application();
+App = window.App || new Extension.Application();
 
 App.module('Collections', function(module) {
     /**
@@ -46,9 +46,5 @@ App.module('Collections', function(module) {
 
     module.addInitializer(function() {
         App.parameters = new App.Collections.Parameters();
-
-        App.parameters.setValues({
-            timescale: 1
-        });
     });
 });
