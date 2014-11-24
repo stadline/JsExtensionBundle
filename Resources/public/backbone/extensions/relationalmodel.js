@@ -7,7 +7,7 @@ Extension.RelationalModel = Backbone.Model.extend({
     set: function() {
         Backbone.Model.prototype.set.apply(this, arguments);
 
-        if (_(this._initialAttributes).isUndefined()) {
+        if (_.isUndefined(this._initialAttributes)) {
             this._initialAttributes = _(this.attributes).clone();
         }
 
@@ -67,7 +67,7 @@ Extension.RelationalModel = Backbone.Model.extend({
         var serialize = function(value) {
             if (value instanceof Backbone.Collection) {
                 return value.chain().map(serialize).reject(_.isUndefined).value();
-            } else if (_(value).isObject() && value.cid) {
+            } else if (_.isObject(value) && value.cid) {
                 return value.id;
             } else {
                 return value;
@@ -152,8 +152,10 @@ Extension.RelationalModel = Backbone.Model.extend({
     },
 
     _save: function() {
-        var xhr = Backbone.Model.prototype.save.apply(this, arguments);
-        this._initialAttributes = _(this.attributes).clone();
+        var self = this;
+        var xhr = Backbone.Model.prototype.save.apply(this, arguments).done(function() {
+            self._initialAttributes = _(self.attributes).clone();
+        });
         return xhr;
     },
     
