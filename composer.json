@@ -10,9 +10,7 @@
     ],
     "require": {
         "symfony/framework-bundle": "~2.3",
-        "jms/serializer-bundle": "~0.12",
-        "dimsemenov/magnific-popup": "dev-master",
-        "qtip2/qtip2": "dev-master"
+        "jms/serializer-bundle": "~0.12"
     },
     "suggest": {
         "fxp/composer-asset-plugin": "NPM/Bower Dependency Manager for Composer",
@@ -22,32 +20,6 @@
         "willdurand/js-translation-bundle": "A pretty nice way to expose your translation messages to your JavaScript",
         "friendsofsymfony/jsrouting-bundle": "A pretty nice way to expose your Symfony2 routing to client applications"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "dimsemenov/magnific-popup",
-                "version": "dev-master",
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/dimsemenov/Magnific-Popup.git",
-                    "reference": "master"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "qtip2/qtip2",
-                "version": "dev-master",
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/qTip2/qTip2",
-                    "reference": "master"
-                }
-            }
-        }
-    ],
     "autoload": {
         "psr-4": {
             "StadLine\\JsExtensionBundle\\": ""

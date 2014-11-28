@@ -24,13 +24,16 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/jquery.serialize-object.js
             output: js/marionette-bundled.js
 
-        magnific_popup_js:
+        jquery_plugins_js:
             inputs:
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/jquery.qtip.js
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/jquery.magnific-popup.js
-            output: js/magnific-popup.js
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/jquery.plugins.js
+            output: js/jquery-plugins-bundled.js
 
         # stylesheets
-        magnific_popup_css:
+        jquery_plugins_css:
             inputs:
-                - %kernel.root_dir%/../web/bundles/stadlinejsextension/css/magnific-popup.css
-            output: css/magnific-popup.css
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/css/jquery.qtip.css
+                - %kernel.root_dir%/../web/bundles/stadlinejsextension/css/jquery.magnific-popup.css
+            output: css/jquery-plugins-bundled.css
