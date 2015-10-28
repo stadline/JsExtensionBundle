@@ -10,7 +10,7 @@
     ],
     "require": {
         "symfony/framework-bundle": "~2.3",
-        "jms/serializer-bundle": "~0.12"
+        "jms/serializer-bundle": "~1.0"
     },
     "suggest": {
         "fxp/composer-asset-plugin": "NPM/Bower Dependency Manager for Composer",
