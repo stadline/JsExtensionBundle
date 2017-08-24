@@ -42,7 +42,7 @@ Extension.LayoutView = Marionette.LayoutView.extend({
                     });
                 },
                 close: function() {
-                    modalView.destroy();
+                    self.modal.currentView.destroy();
                 }
             }
         }));
