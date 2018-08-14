@@ -5,4 +5,4 @@ services:
             - { name: twig.extension }
         arguments: [ %kernel.root_dir% ]
         calls :
-            - [setSerializer, [@jms_serializer]]
+            - [setSerializer, ['@jms_serializer']]
