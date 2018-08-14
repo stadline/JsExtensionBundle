@@ -10,7 +10,7 @@ assetic:
 
         backbone_js:
             inputs:
-                - @underscore_js
+                - '@underscore_js'
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/backbone.js
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/backbone.mutators.js
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/backbone.basicauth.js
@@ -18,7 +18,7 @@ assetic:
 
         marionette_js:
             inputs:
-                - @backbone_js
+                - '@backbone_js'
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/marionette.js
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/marionette.filtering.js
                 - %kernel.root_dir%/../web/bundles/stadlinejsextension/js/jquery.serialize-object.js
