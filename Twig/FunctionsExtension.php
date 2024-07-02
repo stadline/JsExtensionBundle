@@ -76,7 +76,7 @@ class FunctionsExtension extends \Twig_Extension
         $json = array();
 
         foreach ($context as $key => $value) {
-            if (!in_array($key, array('_parent', 'assetic', 'app')) && !preg_match('#sonata#', $key)) {
+            if (!in_array($key, array('_parent', 'assetic', 'app', 'exception')) && !preg_match('#sonata#', $key)) {
                 try {
                     $serializedValue = $this->serializer->serialize($value, 'json');
                 } catch (\JMS\Serializer\Exception\RuntimeException $ex) {
